@@ -2,6 +2,8 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'kotlin-android-extensions'
+
 }
 
 android {
@@ -32,11 +34,28 @@ android {
         jvmTarget = '1.8'
     }
 
-
+    // Enables data binding.
+    buildFeatures {
+        dataBinding true
+    }
 
 }
 
 dependencies {
+
+    // Support libraries
+    implementation "androidx.appcompat:appcompat:1.2.0"
+    implementation "androidx.fragment:fragment:1.2.5"
+    implementation "androidx.constraintlayout:constraintlayout:2.0.0-rc1"
+
+    // Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.21"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.21"
+
+// navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
+
 
     // Room and Lifecycle dependencies
 //    implementation "androidx.room:room-runtime:2.4.3"
