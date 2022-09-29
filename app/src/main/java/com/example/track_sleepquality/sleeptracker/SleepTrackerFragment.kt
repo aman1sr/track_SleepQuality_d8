@@ -23,8 +23,10 @@ class SleepTrackerFragment : Fragment() {
             inflater,R.layout.fragment_sleep_tracker,container,false
         )
 
+        /* requireNotNull Kotlin function throws an IllegalArgumentException if the value is null. */
         val application = requireNotNull(this.activity).application
 
+        // Create an instance of the ViewModel Factory.
         val dataSource = SleepDatabase.getInstance(application).sleepDatabaseDao
 
         val viewModelFactory = SleepTrackerViewModelFactory(dataSource, application)
