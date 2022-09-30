@@ -2,14 +2,15 @@
 
 #What the App does: 
 app uses Room Database to store the sleep records
-![sleep tracker app](https://github.com/aman1sr/track_SleepQuality_d8/blob/master/app/src/main/res/raw/room.png)
+
+<img src ="https://github.com/aman1sr/track_SleepQuality_d8/blob/master/app/src/main/res/raw/room.png" />
 
 ## Architecture
 This app uses a simplified architecture, 
 - UI controller
 - View model and LiveData
 - A Room database
-<img src ="https://github.com/aman1sr/track_SleepQuality_d8/blob/master/app/src/main/res/raw/room_arch.png"/>
+<img src ="https://github.com/aman1sr/track_SleepQuality_d8/blob/master/app/src/main/res/raw/room_arch.png" />
 
 ## Why use 
 <details>
