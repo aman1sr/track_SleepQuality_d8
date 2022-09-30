@@ -2,7 +2,7 @@
 
 #What the App does: 
 app uses Room Database to store the sleep records
-
+![sleep tracker app](https://github.com/aman1sr/track_SleepQuality_d8/blob/master/app/src/main/res/raw/room.png)
 
 ## Architecture
 This app uses a simplified architecture, 
