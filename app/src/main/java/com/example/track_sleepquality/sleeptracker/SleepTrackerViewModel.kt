@@ -27,19 +27,25 @@ class SleepTrackerViewModel(
     }
 
     private fun initializeTonight() {
+        /* passing in a lambda to the launch coroutine builder */
       viewModelScope.launch {
           tonight.value = getTonightFromDatabase()
       }
 
 
     }
+/*   A suspending function is simply a function that can be paused and resumed at a later time.
+        They can execute a long running operation and wait for it to complete without blocking.
 
+       syntax:  It can take a parameter and have a return type.
+                However, suspending functions can only be invoked by another suspending function or within a coroutine.
+        */
     private suspend fun getTonightFromDatabase(): SleepNight? {
-        var night = database.getTonight()
-        if (night?.endTimeMilli != night?.startTimeMilli) {
-            night = null
-        }
-        return night
+    var night = database.getTonight()
+    if (night?.endTimeMilli != night?.startTimeMilli) {
+        night = null
+    }
+    return night
     }
 
     fun onStartTracking() {

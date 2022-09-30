@@ -1,12 +1,11 @@
 package com.example.track_sleepquality.database
 
 import android.content.Context
-import androidx.room.Database
-import androidx.room.Room
-import androidx.room.RoomDatabase
+import androidx.room.*
+import androidx.sqlite.db.SupportSQLiteOpenHelper
 
 @Database(entities = [SleepNight::class], version = 1, exportSchema = false)
-abstract class SleepDatabase : RoomDatabase() {
+abstract class SleepDatabase : RoomDatabase(), SleepDatabaseDao {
 
     abstract val sleepDatabaseDao: SleepDatabaseDao
 
@@ -32,5 +31,17 @@ abstract class SleepDatabase : RoomDatabase() {
                 return instance
             }
         }
+    }
+
+    override fun createOpenHelper(config: DatabaseConfiguration?): SupportSQLiteOpenHelper {
+        TODO("Not yet implemented")
+    }
+
+    override fun createInvalidationTracker(): InvalidationTracker {
+        TODO("Not yet implemented")
+    }
+
+    override fun clearAllTables() {
+        TODO("Not yet implemented")
     }
 }
